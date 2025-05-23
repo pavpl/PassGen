@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    font-family: 'Space Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0 0 0;
+}
+
+.logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    color: #1978e5;
+    margin-bottom: 4px;
+}
+
+.logo-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 2rem 2.5rem 1.5rem 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+    width: 95%;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    text-align: center;
+    color: #1978e5;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.01em;
+}
+
+.password-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+#password {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    background: #f7fafd;
+    color: #222;
+    font-family: inherit;
+}
+
+#copy-btn {
+    background: #1978e5;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+#copy-btn:hover {
+    background: #125bb2;
+}
+
+.settings {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.setting {
+    margin: 0.7rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="range"] {
+    flex: 1;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+#generate-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    background: #1978e5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: background 0.3s;
+}
+
+#generate-btn:hover {
+    background: #125bb2;
+}
+
+.strength-meter {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.strength-bar {
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.strength-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: var(--width, 50%);
+    background: var(--color, #f1c40f);
+    border-radius: 3px;
+    transition: width 0.3s, background 0.3s;
+}
+
+.strength-text {
+    font-size: 0.95rem;
+    color: #1978e5;
+    font-weight: 500;
+}
+
+.footer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0 18px 0;
+    background: none;
+}
+
+.credit-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1978e5;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.credit-link:hover {
+    color: #125bb2;
+}
+
+.github-logo {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+        max-width: 98vw;
+    }
+    .main-title {
+        font-size: 1.3rem;
+    }
+    .footer {
+        font-size: 0.95rem;
+        padding: 16px 0 10px 0;
+    }
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+    .logo-title {
+        font-size: 1.1rem;
+    }
+    .password-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    #copy-btn {
+        width: 100%;
+        padding: 10px 0;
+    }
+} 
